@@ -1,0 +1,25 @@
+﻿<Window x:Class="MainApp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MainApp" Height="350" Width="525">
+    <Grid>
+        <StackPanel>
+            <Button Style="{StaticResource SimpleButtonStyle}" Content="Simple Button"/>
+            <Button Style="{StaticResource AnimatedButtonStyle}" Content="Animated Button"/>
+            <TextBlock Style="{StaticResource SimpleTextBlockStyle}" Text="Simple TextBlock"/>
+            <Label Style="{StaticResource AnimatedLabelStyle}" Content="Animated Label"/>
+            <TextBox Style="{StaticResource SimpleTextBoxStyle}" Text="Simple TextBox"/>
+
+ 
+            <StackPanel>
+                <TextBlock Style="{StaticResource SimpleTextBlockStyle}" Text="Введите текст для сериализации:"/>
+                <TextBox x:Name="TextInput" Style="{StaticResource SimpleTextBoxStyle}" Text=""/>
+                <StackPanel Orientation="Horizontal">
+                    <Button x:Name="SerializeButton" Style="{StaticResource AnimatedButtonStyle}" Content="Сериализация" Click="SerializeButton_Click"/>
+                    <Button x:Name="DeserializeButton" Style="{StaticResource AnimatedButtonStyle}" Content="Десериализация" Click="DeserializeButton_Click"/>
+                </StackPanel>
+            </StackPanel>
+
+        </StackPanel>
+    </Grid>
+</Window>
